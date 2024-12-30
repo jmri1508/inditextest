@@ -1,0 +1,1 @@
+package com.inditex.zara.adapters.outbound.persistence;

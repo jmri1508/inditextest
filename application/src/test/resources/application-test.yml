@@ -1,0 +1,35 @@
+server:
+  port: 8080
+logging:
+  level:
+    root: INFO
+    com.inditex: DEBUG
+spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    username: sa
+    password: password
+    driverClassName: org.h2.Driver
+  jpa:
+    spring.jpa.database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+    hibernate:
+      ddl-auto: none
+  application:
+    domain: inditex
+    name: zara:1.0.0-SNAPSHOT
+    description: zara
+    version: 1.0.0-SNAPSHOT
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  h2:
+    console.enabled: true
+
+api:
+  endpoints:
+    price:
+      name: price
+      mapping: /prices
